@@ -13,8 +13,8 @@
 
 <body class="login_page">
    <form action="index.php" method="post">
-      <h1 style="font-size: 40px;">Fargo Courier</h1>
-      <h2 style="font-size: 20px;">Customer Portal</h2><br>
+      <h1 style="font-size:40px;">Fargo Courier</h1>
+      <h2 style="font-size:20px; color:darkblue">Customer Portal</h2><br>
       <label>Username: </label>
       <input type="text" name="username"><br><br>
       <label>Password: </label>
@@ -28,39 +28,12 @@
 </html>
 
 <?php
-   //   registration 
-   if (isset($_POST["register"])) {
-      // filter malicious script(s)
-      $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-      $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-
-      if (empty($username)) {
-         echo "<br>";
-         echo "<br>";
-         echo "Please enter a username";
-      } elseif (empty($password)) {
-         echo "<br>";
-         echo "<br>";
-         echo "Please enter a password";
-      } else {
-         $hash = password_hash($password, PASSWORD_DEFAULT);
-         $sql = "INSERT INTO users (user, password)
-                 VALUES ('$username', '$hash')";
-
-         try {
-            mysqli_query($conn, $sql);
-            echo "<br>";
-            echo "<br>";
-            echo "You are now registered!";
-         } catch (mysqli_sql_exception) {
-            echo "<br>";
-            echo "<br>";
-            echo "That username is taken";
-         }
-      }
+   // Register
+   if(isset($_POST["register"])) {
+      header("Location: registration.php");
    }
 
-   // login
+   // Login
    if(isset($_POST["login"])) {
       
       if(!empty($_POST["username"]) && $_POST["password"]) {

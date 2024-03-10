@@ -53,12 +53,43 @@
 
    <!-- PAGE CONTENT-->
    <div class="w3-main" style="margin-left:340px;margin-right:40px">
-
+   
       <!-- Logout -->
       <form action="home.php" method="post">
          <br>
          <input type="submit" name="logout" value="logout" style="margin-left: 90%;">
       </form>
+      
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:80px" id="showcase">
+         <h1 class="w3-jumbo"><b>Deliveries</b></h1>
+         <h1 class="w3-xxxlarge w3-text-red"><b>Gallery</b></h1>
+         <hr style="width:50px;border:5px solid red" class="w3-round">
+      </div>
+
+      <!-- Photo grid (modal) -->
+      <div class="w3-row-padding">
+         <div class="w3-half">
+            <img src="./images/on_loading.jpg" style="width:100%" onclick="onClick(this)" alt="Loading goods for shipment">
+            <img src="./images/drone.jpg" style="width:100%" onclick="onClick(this)" alt="Drone delivery">
+            <img src="./images/bicycle.jpg" style="width:100%" onclick="onClick(this)" alt="Bicycle delivery">
+         </div>
+         
+         <div class="w3-half">
+            <img src="./images/food.png" style="width:100%" onclick="onClick(this)" alt="Delivery woman">
+            <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Mothaf*">
+            <img src="./images/deliveryman.jpg" style="width:100%" onclick="onClick(this)" alt="Home delivery">
+         </div>
+      </div>
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+         <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+         <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+         </div>
+      </div>
 
       <!-- Send parcel -->
       <div class="w3-container" id="send_parcel" style="margin-top:75px">
@@ -109,7 +140,7 @@
          <p><b>The owners have a wealth of experience in the industry: </b>:</p>
       </div>
 
-      <!-- The Team -->
+      <!-- Company Leads -->
       <div class="w3-row-padding w3-grayscale">
          <div class="w3-col m4 w3-margin-bottom">
             <div class="w3-light-grey">
@@ -171,5 +202,15 @@
    <?php
       include("footer.html");
    ?>
+
+   <script>
+      function onClick(element) {
+         document.getElementById("img01").src = element.src;
+         document.getElementById("modal01").style.display = "block";
+         var captionText = document.getElementById("caption");
+         captionText.innerHTML = element.alt;
+      }
+   </script>
+
 </body>
 </html>

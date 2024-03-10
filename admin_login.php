@@ -10,7 +10,7 @@
 <body class="login_page">
    <form action="admin_login.php" method="post">
       <h1 style="font-size: 40px;">Fargo Courier</h1>
-      <h2 style="font-size: 20px;">Admin Portal</h2><br>
+      <h2 style="font-size: 20px; color: darkblue">Admin Portal</h2><br>
       <label>Username: </label>
       <input type="text" name="username"><br><br>
       <label>Password: </label>

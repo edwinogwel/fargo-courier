@@ -29,8 +29,8 @@
          <h3 class="w3-padding-64"><b>Admin<br>&nbsp;Portal</b></h3>
       </div>
       <div class="w3-bar-block">
-         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Admin</a>
-         <a href="#query_customers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Check Customers</a>
+         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+         <a href="#query_customers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Customers Report</a>
       </div>
    </nav>
 
@@ -41,6 +41,9 @@
          <br>
          <input type="submit" name="logout" value="logout" style="margin-left: 90%;">
       </form>
+
+      <img src="./images/admin_home.jpg" alt="img">
+
    </div>
 </body>
 </html>
