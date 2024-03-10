@@ -3,22 +3,23 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home</title>
+   <title>Admin | Login</title>
    <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="login_page">
+<body class="login_page" style="background-image: url('./images/background.jpg');
+      background-repeat: no-repeat; background-size: 100% auto; background-position:center">
    <form action="admin_login.php" method="post">
-      <h1 style="font-size: 40px;">Fargo Courier</h1>
-      <h2 style="font-size: 20px; color: darkblue">Admin Portal</h2><br>
+      <h1 style="font-size: 40px; color: darkslategray">Fargo Courier</h1>
+      <h2 style="font-size: 22px; color: darkgray">Admin Portal</h2><br>
       <label>Username: </label>
       <input type="text" name="username"><br><br>
       <label>Password: </label>
       <input type="password" name="password"><br><br>
       <input type="submit" name="login" style="margin-left: 80px;" value="Log in">
-   </form><br>
+   </form><br><br>
 
-   <a href="index.php">Customer Login</a>
+   <a href="index.php" style="margin-left:80px">Customer Login</a>
 </body>
 </html>
 <?php
@@ -27,13 +28,11 @@
 
       if (!empty($_POST["username"]) && $_POST["password"]) {
 
-         if ($_POST["username"] == "admin" && $_POST["password"] == "1234") 
+         if ($_POST["username"] == "admin" && $_POST["password"] == "1234")
             header("Location: admin_page.php");
 
-      } else {
-         echo "<br>";
-         echo "<br>";
-         echo "Missing username or password";
       }
+      else
+         echo '<script>alert("Missing username or password")</script>';
    }
 ?>

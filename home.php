@@ -12,7 +12,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Fargo Courier</title>
+   <title>Fargo Courier | Home</title>
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -63,7 +63,7 @@
       <!-- Header -->
       <div class="w3-container" style="margin-top:80px" id="showcase">
          <h1 class="w3-jumbo"><b>Deliveries</b></h1>
-         <h1 class="w3-xxxlarge w3-text-red"><b>Gallery</b></h1>
+         <h1 class="w3-xxxlarge w3-text-red"><b>Gallery.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
       </div>
 

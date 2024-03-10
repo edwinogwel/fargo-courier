@@ -62,6 +62,10 @@
       // filter malicious script(s)
       $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
       $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+      $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
+      $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
+      $mobile = filter_input(INPUT_POST, "mobile", FILTER_SANITIZE_SPECIAL_CHARS);
+      $address = filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
 
       if (empty($username)) {
          echo "<br>";
@@ -73,19 +77,15 @@
          echo "Please enter a password";
       } else {
          $hash = password_hash($password, PASSWORD_DEFAULT);
-         $sql = "INSERT INTO users (user, password)
-               VALUES ('$username', '$hash')";
+         $sql = "INSERT INTO users (name, email, mobile, address, user, password)
+                 VALUES ('$name', '$email', '$mobile', '$address', '$username', '$hash')";
 
          try {
             mysqli_query($conn, $sql);
-            echo "<br>";
-            echo "<br>";
-            echo "You are now registered!";
-            header("Location: index.php");
+            echo '<script>alert("You are now registered! Go back and login")</script>';
+            // header("Location: index.php");
          } catch (mysqli_sql_exception) {
-            echo "<br>";
-            echo "<br>";
-            echo "That username is taken";
+            echo '<script>alert("That username is taken")</script>';
          }
       }
    }
