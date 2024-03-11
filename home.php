@@ -12,7 +12,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Fargo Courier | Home</title>
+   <title>Home</title>
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -77,8 +77,8 @@
          
          <div class="w3-half">
             <img src="./images/food.png" style="width:100%" onclick="onClick(this)" alt="Delivery woman">
-            <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Mothaf*">
             <img src="./images/deliveryman.jpg" style="width:100%" onclick="onClick(this)" alt="Home delivery">
+            <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Mothaf*">
          </div>
       </div>
 
@@ -95,25 +95,32 @@
       <div class="w3-container" id="send_parcel" style="margin-top:75px">
          <h1 class="w3-xxxlarge w3-text-red"><b>Send.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
-         <p>Enter the details of the person you would like to send the package to in the form below. You are welcome again!</p>
+         <p>Enter the details of the person you would like to send the package to in the form below.
+            Note that you will be given a <strong>unique tracking number</strong> that you need to keep safely in order
+            to track the status of your shipment. You are welcome again! 
+         </p>
          <form action="tracking_no.php" method="post">
             <div class="w3-section">
-               <label>Name</label>
-               <input class="w3-input w3-border" type="text" name="Name" required>
+               <label>Sender's Name</label>
+               <input class="w3-input w3-border" type="text" name="senderName" required>
             </div>
             <div class="w3-section">
-               <label>Mobile</label>
+               <label>Receiver's Name</label>
+               <input class="w3-input w3-border" type="text" name="receiverName" required>
+            </div>
+            <div class="w3-section">
+               <label>Receiver's Mobile</label>
                <input class="w3-input w3-border" type="text" name="Mobile" required>
             </div>
             <div class="w3-section">
-               <label>Address</label>
+               <label>Receiver's Address</label>
                <input class="w3-input w3-border" type="text" name="Address" required>
             </div>
             <div class="w3-section">
                <label>Cargo</label>
                <input class="w3-input w3-border" type="text" name="Cargo" required>
             </div>
-            <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Cargo</button>
+            <button type="submit" name="send" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Cargo</button>
          </form>
       </div>
 
@@ -121,10 +128,19 @@
       <div class="w3-container" id="services" style="margin-top:75px">
          <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
-         <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-         <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         <p>
+            We are a cargo shipment company that focus on getting your goods to their
+            intended recipient in time!
+         </p>
+         <p>
+            Discover seamless and reliable delivery solutions with Fargo Express Couriers.
+            Our courier business is committed to providing swift and secure transportation
+            services tailored to meet your specific needs. From urgent document deliveries to
+            time-sensitive packages, we offer a range of courier services that ensure your items
+            reach their destination efficiently. With a dedicated team of experienced couriers and a
+            state-of-the-art tracking system, we guarantee real-time updates and the utmost care for
+            your shipments. Choose Fargo Express Couriers for a dependable partner in prompt and
+            professional delivery services, connecting you and your business to success.
          </p>
       </div>
 
@@ -148,7 +164,10 @@
                <div class="w3-container">
                   <h3>John Doe</h3>
                   <p class="w3-opacity">CEO & Founder</p>
-                  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                  <p>
+                     John Doe is the CEO and Founder of our company. He has a
+                     total of 8 years industry expertise under his belt.
+                  </p>
                </div>
             </div>
          </div>
@@ -158,7 +177,10 @@
                <div class="w3-container">
                   <h3>Jane Doe</h3>
                   <p class="w3-opacity">COO</p>
-                  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                  <p>
+                     Jane is our Chief Operating Officer, and she's the one who has
+                     been making sure that all our operations are well co-ordinated.
+                  </p>
                </div>
             </div>
          </div>
@@ -168,7 +190,10 @@
                <div class="w3-container">
                   <h3>Mike Ross</h3>
                   <p class="w3-opacity">CTO</p>
-                  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                  <p>
+                     Having worked with Google and Apple, Mike has been instrumental
+                     in making surely our tech is up-to-date.
+                  </p>
                </div>
             </div>
          </div>
