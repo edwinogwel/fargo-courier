@@ -70,15 +70,15 @@
       <!-- Photo grid (modal) -->
       <div class="w3-row-padding">
          <div class="w3-half">
-            <img src="./images/on_loading.jpg" style="width:100%" onclick="onClick(this)" alt="Loading goods for shipment">
+            <img src="./images/deliveryman.jpg" style="width:100%" onclick="onClick(this)" alt="Home delivery">
             <img src="./images/drone.jpg" style="width:100%" onclick="onClick(this)" alt="Drone delivery">
-            <img src="./images/bicycle.jpg" style="width:100%" onclick="onClick(this)" alt="Bicycle delivery">
+            <img src="./images/on_loading.jpg" style="width:100%" onclick="onClick(this)" alt="Loading goods for shipment">
          </div>
          
          <div class="w3-half">
             <img src="./images/food.png" style="width:100%" onclick="onClick(this)" alt="Delivery woman">
-            <img src="./images/deliveryman.jpg" style="width:100%" onclick="onClick(this)" alt="Home delivery">
             <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Mothaf*">
+            <img src="./images/bicycle.jpg" style="width:100%" onclick="onClick(this)" alt="Bicycle delivery">
          </div>
       </div>
 
@@ -142,6 +142,45 @@
             your shipments. Choose Fargo Express Couriers for a dependable partner in prompt and
             professional delivery services, connecting you and your business to success.
          </p>
+
+         <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+               <ul class="w3-ul w3-light-grey w3-center">
+                  <li class="w3-dark-grey w3-xlarge w3-padding-32">Standard</li>
+                  <li class="w3-padding-16">Delivery</li>
+                  <li class="w3-padding-16">Reliable</li>
+                  <li class="w3-padding-16">Delayed Tracking</li>
+                  <li class="w3-padding-16">Weekday</li>
+                  <li class="w3-padding-16">Motor-Vehicle Delivery</li>
+                  <li class="w3-padding-16">
+                     <h2>$ 69</h2>
+                     <span class="w3-opacity">per delivery</span>
+                  </li>
+                  <li class="w3-light-grey w3-padding-24">
+                     <button class="w3-button w3-white w3-padding-large w3-hover-black"
+                             style="background-color: #9b9595 !important;">Sign Up</button>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="w3-half">
+               <ul class="w3-ul w3-light-grey w3-center">
+                  <li class="w3-red w3-xlarge w3-padding-32">Express</li>
+                  <li class="w3-padding-16">Quick Delivery</li>
+                  <li class="w3-padding-16">More Reliable</li>
+                  <li class="w3-padding-16">Real-time Tracking</li>
+                  <li class="w3-padding-16">Weekday n' Weekend</li>
+                  <li class="w3-padding-16">Drone Delivery</li>
+                  <li class="w3-padding-16">
+                     <h2>$ 109</h2>
+                     <span class="w3-opacity">per delivery</span>
+                  </li>
+                  <li class="w3-light-grey w3-padding-24">
+                     <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+                  </li>
+               </ul>
+            </div>
+         </div>
       </div>
 
       <!-- Owners -->
@@ -149,9 +188,14 @@
          <h1 class="w3-xxxlarge w3-text-red"><b>Owners.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
          <p>The best team in the world.</p>
-         <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         <p>
+            At Fargo Courier, the dynamic leadership trio is the driving force behind our unparalleled
+            success and continued growth. Our visionary CEO sets the tone with strategic foresight, guiding
+            the company towards new heights in the ever-evolving logistics industry. The COO, a master of
+            operational efficiency, ensures the seamless execution of our day-to-day activities, optimizing
+            processes to provide our clients with top-notch, reliable service. Meanwhile, our brilliant CTO
+            spearheads technological innovation, implementing cutting-edge solutions that enhance our tracking
+            systems, security protocols, and overall customer experience.
          </p>
          <p><b>The owners have a wealth of experience in the industry: </b>:</p>
       </div>
