@@ -34,18 +34,34 @@
       header("Location: registration.php");
    }
 
-   // Login
-   if(isset($_POST["login"])) {
-      
-      if(!empty($_POST["username"]) && $_POST["password"]) {
-         $_SESSION["username"] = $_POST["username"];
-         $_SESSION["password"] = $_POST["password"];
-
+   // Validate username & password from DB
+   if(!empty($_POST["login"])) {
+      $username = $_POST["username"];
+      $password = $_POST["password"];
+      $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+      $result = mysqli_query($conn, $query);
+      $count = mysqli_num_rows($result);
+      if($count>0) {
+         // echo "Login Successful";
          header("Location: home.php");
       }
-      else
-         echo '<script>alert("Missing username or password")</script>';
+      else {
+         echo '<script>alert("Login Unsuccessful")</script>';
+      }
    }
+
+   // // Login
+   // if(isset($_POST["login"])) {
+      
+   //    if(!empty($_POST["username"]) && $_POST["password"]) {
+   //       $_SESSION["username"] = $_POST["username"];
+   //       $_SESSION["password"] = $_POST["password"];
+
+   //       header("Location: home.php");
+   //    }
+   //    else
+   //       echo '<script>alert("Missing username or password")</script>';
+   // }
 ?>
 
 <?php

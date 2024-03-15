@@ -77,7 +77,8 @@
          echo "Please enter a password";
       } else {
          $hash = password_hash($password, PASSWORD_DEFAULT);
-         $sql = "INSERT INTO users (name, email, mobile, address, user, password)
+       
+         $sql = "INSERT INTO users (name, email, mobile, address, username, password)
                  VALUES ('$name', '$email', '$mobile', '$address', '$username', '$hash')";
 
          try {
