@@ -92,5 +92,5 @@
    }
 ?>
 <?php
-   mysqli_close($conn);  // not a bug🙄
+   mysqli_close($conn);
 ?>

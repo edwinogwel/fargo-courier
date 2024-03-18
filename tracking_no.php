@@ -8,8 +8,8 @@
       <title>Confirmation Page</title>
    </head>
    <body style="text-align: center; padding-top: 10%; zoom: 1.5">
-      <p style="color: red; font-size: 18px"><em>Keep this number safely you will
-         need it to track your shipment</em></p>
+      <p style="color: red; font-size: 18px"><bold><em>Keep this number safely you will
+         need it to track your shipment</em></bold></p>
       <hr> <br>
       <h2>Unique Tracking No: </h2>
    </body>

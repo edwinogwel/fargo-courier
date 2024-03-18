@@ -35,8 +35,8 @@
       </div>
       <div class="w3-bar-block">
          <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-         <a href="#send_parcel" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Send Parcel</a>
-         <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+         <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a>
+         <a href="#send_cargo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Send Cargo</a>
          <a href="#owners" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Owners</a>
          <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
       </div>
@@ -77,7 +77,7 @@
          
          <div class="w3-half">
             <img src="./images/food.png" style="width:100%" onclick="onClick(this)" alt="Delivery woman">
-            <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Mothaf*">
+            <img src="./images/cat.jpg" style="width:100%" onclick="onClick(this)" alt="Meow! Meow! Your delivery Motha*">
             <img src="./images/bicycle.jpg" style="width:100%" onclick="onClick(this)" alt="Bicycle delivery">
          </div>
       </div>
@@ -91,42 +91,9 @@
          </div>
       </div>
 
-      <!-- Send parcel -->
-      <div class="w3-container" id="send_parcel" style="margin-top:75px">
-         <h1 class="w3-xxxlarge w3-text-red"><b>Send.</b></h1>
-         <hr style="width:50px;border:5px solid red" class="w3-round">
-         <p>Enter the details of the person you would like to send the package to in the form below.
-            Note that you will be given a <strong>unique tracking number</strong> that you need to keep safely in order
-            to track the status of your shipment. You are welcome again! 
-         </p>
-         <form action="tracking_no.php" method="post">
-            <div class="w3-section">
-               <label>Sender's Name</label>
-               <input class="w3-input w3-border" type="text" name="senderName" required>
-            </div>
-            <div class="w3-section">
-               <label>Receiver's Name</label>
-               <input class="w3-input w3-border" type="text" name="receiverName" required>
-            </div>
-            <div class="w3-section">
-               <label>Receiver's Mobile</label>
-               <input class="w3-input w3-border" type="text" name="Mobile" required>
-            </div>
-            <div class="w3-section">
-               <label>Receiver's Address</label>
-               <input class="w3-input w3-border" type="text" name="Address" required>
-            </div>
-            <div class="w3-section">
-               <label>Cargo</label>
-               <input class="w3-input w3-border" type="text" name="Cargo" required>
-            </div>
-            <button type="submit" name="send" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Cargo</button>
-         </form>
-      </div>
-
-      <!-- Services -->
-      <div class="w3-container" id="services" style="margin-top:75px">
-         <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+      <!-- Packages -->
+      <div class="w3-container" id="packages" style="margin-top:75px">
+         <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
          <p>
             We are a cargo shipment company that focus on getting your goods to their
@@ -158,7 +125,8 @@
                   </li>
                   <li class="w3-light-grey w3-padding-24">
                      <button class="w3-button w3-white w3-padding-large w3-hover-black"
-                             style="background-color: #9b9595 !important;">Sign Up</button>
+                             style="background-color: #9b9595 !important;"
+                             onclick="location.href='standardCheckout.php'">Sign Up</button>
                   </li>
                </ul>
             </div>
@@ -176,11 +144,45 @@
                      <span class="w3-opacity">per delivery</span>
                   </li>
                   <li class="w3-light-grey w3-padding-24">
-                     <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+                     <button class="w3-button w3-red w3-padding-large w3-hover-black"
+                             onclick="location.href='expressCheckout.php'">Sign Up</button>
                   </li>
                </ul>
             </div>
          </div>
+      </div>
+
+      <!-- Send parcel -->
+      <div class="w3-container" id="send_cargo" style="margin-top:75px">
+         <h1 class="w3-xxxlarge w3-text-red"><b>Send.</b></h1>
+         <hr style="width:50px;border:5px solid red" class="w3-round">
+         <p>Enter the details of the person you would like to send the package to in the form below.
+            Note that you will be given a <strong>unique tracking number</strong> that you need to keep safely in order
+            to track the status of your shipment. You are welcome again! 
+         </p>
+         <form action="tracking_no.php" method="post">
+            <div class="w3-section">
+               <label>Sender's Name</label>
+               <input class="w3-input w3-border" type="text" name="senderName" required>
+            </div>
+            <div class="w3-section">
+               <label>Receiver's Name</label>
+               <input class="w3-input w3-border" type="text" name="receiverName" required>
+            </div>
+            <div class="w3-section">
+               <label>Receiver's Mobile</label>
+               <input class="w3-input w3-border" type="text" name="Mobile" required>
+            </div>
+            <div class="w3-section">
+               <label>Receiver's Address</label>
+               <input class="w3-input w3-border" type="text" name="Address" required>
+            </div>
+            <div class="w3-section">
+               <label>Cargo</label>
+               <input class="w3-input w3-border" type="text" name="Cargo" required>
+            </div>
+            <button type="submit" name="send" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Cargo</button>
+         </form>
       </div>
 
       <!-- Owners -->
@@ -204,12 +206,12 @@
       <div class="w3-row-padding w3-grayscale">
          <div class="w3-col m4 w3-margin-bottom">
             <div class="w3-light-grey">
-               <img src="./images/John_Doe.jpg" alt="John" style="width:100%">
+               <img src="./images/gunna.jpeg" alt="John" style="width:100%">
                <div class="w3-container">
-                  <h3>John Doe</h3>
+                  <h3>Khaligraph Jones</h3>
                   <p class="w3-opacity">CEO & Founder</p>
                   <p>
-                     John Doe is the CEO and Founder of our company. He has a
+                     Khaligraph Jones is the CEO and Founder of our company. He has a
                      total of 8 years industry expertise under his belt.
                   </p>
                </div>
@@ -217,12 +219,12 @@
          </div>
          <div class="w3-col m4 w3-margin-bottom">
             <div class="w3-light-grey">
-               <img src="./images/Jane_Doe.jpg" alt="Jane" style="width:100%">
+               <img src="./images/billie.jpg" alt="Jane" style="width:100%">
                <div class="w3-container">
-                  <h3>Jane Doe</h3>
+                  <h3>Femi One</h3>
                   <p class="w3-opacity">COO</p>
                   <p>
-                     Jane is our Chief Operating Officer, and she's the one who has
+                     Femi One is our Chief Operating Officer, and she's the one who has
                      been making sure that all our operations are well co-ordinated.
                   </p>
                </div>
@@ -230,12 +232,12 @@
          </div>
          <div class="w3-col m4 w3-margin-bottom">
             <div class="w3-light-grey">
-               <img src="./images/Mike_Ross.jpg" alt="Mike" style="width:100%">
+               <img src="./images/thugger.jpg" alt="Mike" style="width:100%">
                <div class="w3-container">
-                  <h3>Mike Ross</h3>
+                  <h3>Octopizzo</h3>
                   <p class="w3-opacity">CTO</p>
                   <p>
-                     Having worked with Google and Apple, Mike has been instrumental
+                     Having worked with Google and Apple, Octo has been instrumental
                      in making surely our tech is up-to-date.
                   </p>
                </div>
@@ -248,7 +250,7 @@
          <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
          <hr style="width:50px;border:5px solid red" class="w3-round">
          <p>Do you want us to safely ship your goods? Fill out the form and let us submit it for you 🙂 We love serving you!</p>
-         <form action="/action_page.php" target="_blank">
+         <form action="home.php" method="post">
             <div class="w3-section">
                <label>Name</label>
                <input class="w3-input w3-border" type="text" name="Name" required>
@@ -261,7 +263,7 @@
                <label>Message</label>
                <input class="w3-input w3-border" type="text" name="Message" required>
             </div>
-            <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" name="send_msg">Send Message</button>
          </form>
       </div>
       
@@ -270,6 +272,10 @@
    
    <?php
       include("footer.html");
+
+      if(isset($_POST["send_msg"])) {
+         echo '<script>alert("Thanks for sending us a message! We\'ll get back to you via email.")</script>';
+      }
    ?>
 
    <script>
