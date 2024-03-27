@@ -26,27 +26,27 @@
       <form action="registration.php" method="post">
          <div class="w3-section">
             <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="name" required>
+            <input class="w3-input w3-border" type="text" name="name" autocomplete="off" required>
          </div>
          <div class="w3-section">
             <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="email" required>
+            <input class="w3-input w3-border" type="text" name="email" autocomplete="off" required>
          </div>
          <div class="w3-section">
             <label>Mobile</label>
-            <input class="w3-input w3-border" type="text" name="mobile" required>
+            <input class="w3-input w3-border" type="text" name="mobile" autocomplete="off" required>
          </div>
          <div class="w3-section">
             <label>Address</label>
-            <input class="w3-input w3-border" type="text" name="address" required>
+            <input class="w3-input w3-border" type="text" name="address" autocomplete="off" required>
          </div>
          <div class="w3-section">
             <label>Username</label>
-            <input class="w3-input w3-border" type="text" name="username" required>
+            <input class="w3-input w3-border" type="text" name="username" autocomplete="off" required>
          </div>
          <div class="w3-section">
             <label>Password</label>
-            <input class="w3-input w3-border" type="text" name="password" required>
+            <input class="w3-input w3-border" type="text" name="password" autocomplete="off" required>
          </div>
          <button type="submit" class="w3-button w3-block w3-padding-large  w3-red w3-margin-bottom"
                  name="register">Register

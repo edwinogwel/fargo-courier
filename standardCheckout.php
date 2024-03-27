@@ -4,6 +4,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Checkout</title>
    <link rel="stylesheet" href="css/checkout.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+   <style>
+      body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+   </style>
 </head>
 <body>
    <section class="component">
@@ -14,13 +18,13 @@
       <div class="credit-card">
         <h2>Credit card</h2>
         <form action="standardCheckout.php" method="post">
-          <input type="text" placeholder="NAME" />
-          <div class="line"><input type="text" placeholder="CARD" /> <input type="text" placeholder="NUMBER" /> <input type="text" /> <input type="text" /></div>
-          <div class="line">
+            <input type="text" placeholder="NAME" />
+            <div class="line"><input type="text" placeholder="CARD" /> <input type="text" placeholder="NUMBER" /> <input type="text" /> <input type="text" /></div>
+            <div class="line">
             <input class="litle" type="text" placeholder="EXPIRY" />
             <input class="tall" type="text" placeholder="CCV" />
-          </div>
-          <button type="submit" class="valid-button" name="checkout">PROCEED TO CHECKOUT</button>
+            </div>
+            <button type="submit" class="valid-button" name="checkout">PROCEED TO CHECKOUT</button>
         </form>
       </div>
    </section>

@@ -13,7 +13,7 @@
       <h1 style="font-size: 40px; color: darkslategray">Fargo Courier</h1>
       <h2 style="font-size: 22px; color: darkgray">Admin Portal</h2><br>
       <label>Username: </label>
-      <input type="text" name="username"><br><br>
+      <input type="text" name="username" autocomplete="off"><br><br>
       <label>Password: </label>
       <input type="password" name="password"><br><br>
       <input type="submit" name="login" style="margin-left: 80px;" value="Log in">

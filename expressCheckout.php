@@ -4,6 +4,10 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Checkout</title>
    <link rel="stylesheet" href="css/checkout.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+   <style>
+      body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+   </style>
 </head>
 <body>
    <section class="component">

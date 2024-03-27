@@ -163,23 +163,23 @@
          <form action="tracking_no.php" method="post">
             <div class="w3-section">
                <label>Sender's Name</label>
-               <input class="w3-input w3-border" type="text" name="senderName" required>
+               <input class="w3-input w3-border" type="text" name="senderName" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Receiver's Name</label>
-               <input class="w3-input w3-border" type="text" name="receiverName" required>
+               <input class="w3-input w3-border" type="text" name="receiverName" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Receiver's Mobile</label>
-               <input class="w3-input w3-border" type="text" name="Mobile" required>
+               <input class="w3-input w3-border" type="text" name="Mobile" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Receiver's Address</label>
-               <input class="w3-input w3-border" type="text" name="Address" required>
+               <input class="w3-input w3-border" type="text" name="Address" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Cargo</label>
-               <input class="w3-input w3-border" type="text" name="Cargo" required>
+               <input class="w3-input w3-border" type="text" name="Cargo" autocomplete="off" required>
             </div>
             <button type="submit" name="send" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Cargo</button>
          </form>
@@ -211,7 +211,7 @@
                   <h3>Khaligraph Jones</h3>
                   <p class="w3-opacity">CEO & Founder</p>
                   <p>
-                     Khaligraph Jones is the CEO and Founder of our company. He has a
+                     Papa Jones is the CEO and Founder of our company. He has a
                      total of 8 years industry expertise under his belt.
                   </p>
                </div>
@@ -224,7 +224,7 @@
                   <h3>Femi One</h3>
                   <p class="w3-opacity">COO</p>
                   <p>
-                     Femi One is our Chief Operating Officer, and she's the one who has
+                     Femi is our Chief Operating Officer, and she's the one who has
                      been making sure that all our operations are well co-ordinated.
                   </p>
                </div>
@@ -253,15 +253,15 @@
          <form action="home.php" method="post">
             <div class="w3-section">
                <label>Name</label>
-               <input class="w3-input w3-border" type="text" name="Name" required>
+               <input class="w3-input w3-border" type="text" name="Name" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Email</label>
-               <input class="w3-input w3-border" type="text" name="Email" required>
+               <input class="w3-input w3-border" type="text" name="Email" autocomplete="off" required>
             </div>
             <div class="w3-section">
                <label>Message</label>
-               <input class="w3-input w3-border" type="text" name="Message" required>
+               <input class="w3-input w3-border" type="text" name="Message" autocomplete="off" required>
             </div>
             <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" name="send_msg">Send Message</button>
          </form>
