@@ -76,10 +76,10 @@
          echo "<br>";
          echo "Please enter a password";
       } else {
-         $hash = password_hash($password, PASSWORD_DEFAULT);
+         // $hash = password_hash($password, PASSWORD_DEFAULT);
        
          $sql = "INSERT INTO users (name, email, mobile, address, username, password)
-                 VALUES ('$name', '$email', '$mobile', '$address', '$username', '$hash')";
+                 VALUES ('$name', '$email', '$mobile', '$address', '$username', '$password')";
 
          try {
             mysqli_query($conn, $sql);
