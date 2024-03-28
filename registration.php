@@ -18,37 +18,46 @@
    </style>
 </head>
 
-<body>
-   <div class="w3-container" id="contact">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Registration.</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
+<body style="background-image: url('./images/background2.jpg');background-repeat: no-repeat;
+      background-size: 100% auto; background-position:center;">
 
       <form action="registration.php" method="post">
+         <input type="submit" value="login" name="login"
+                style="margin-top:10px;margin-left:90%;float:left">
+      </form>
+
+   <div class="w3-container" id="contact" style="width:50%;margin:auto">
+
+      <h1 class="w3-xxxlarge" style="color:darkgreen"><b>Registration.</b></h1>
+      <hr style="width:50px;border:5px solid green" class="w3-round">
+
+      <form action="registration.php" method="post" style="color:gray">
          <div class="w3-section">
-            <label>Name</label>
+            <label><strong>Name</label>
             <input class="w3-input w3-border" type="text" name="name" autocomplete="off" required>
          </div>
          <div class="w3-section">
-            <label>Email</label>
+            <label><strong>Email</strong></label>
             <input class="w3-input w3-border" type="text" name="email" autocomplete="off" required>
          </div>
          <div class="w3-section">
-            <label>Mobile</label>
+            <label><strong>Mobile</strong></label>
             <input class="w3-input w3-border" type="text" name="mobile" autocomplete="off" required>
          </div>
          <div class="w3-section">
-            <label>Address</label>
+            <label><strong>Address</strong></label>
             <input class="w3-input w3-border" type="text" name="address" autocomplete="off" required>
          </div>
          <div class="w3-section">
-            <label>Username</label>
+            <label><strong>Username</strong></label>
             <input class="w3-input w3-border" type="text" name="username" autocomplete="off" required>
          </div>
          <div class="w3-section">
-            <label>Password</label>
+            <label><strong>Password</strong></label>
             <input class="w3-input w3-border" type="text" name="password" autocomplete="off" required>
          </div>
-         <button type="submit" class="w3-button w3-block w3-padding-large  w3-red w3-margin-bottom"
+         <button type="submit" class="w3-button w3-block w3-padding-large w3-margin-bottom"
+                 style="background:darkgreen; color:white"
                  name="register">Register
          </button>
       </form>
@@ -57,7 +66,7 @@
 </html>
 
 <?php
-   //   Registration 
+   // Registration 
    if (isset($_POST["register"])) {
       // filter malicious script(s)
       $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -67,28 +76,22 @@
       $mobile = filter_input(INPUT_POST, "mobile", FILTER_SANITIZE_SPECIAL_CHARS);
       $address = filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
 
-      if (empty($username)) {
-         echo "<br>";
-         echo "<br>";
-         echo "Please enter a username";
-      } elseif (empty($password)) {
-         echo "<br>";
-         echo "<br>";
-         echo "Please enter a password";
-      } else {
-         // $hash = password_hash($password, PASSWORD_DEFAULT);
-       
-         $sql = "INSERT INTO users (name, email, mobile, address, username, password)
-                 VALUES ('$name', '$email', '$mobile', '$address', '$username', '$password')";
+      // $hash = password_hash($password, PASSWORD_DEFAULT);
+      
+      $sql = "INSERT INTO users (name, email, mobile, address, username, password)
+              VALUES ('$name', '$email', '$mobile', '$address', '$username', '$password')";
 
-         try {
-            mysqli_query($conn, $sql);
-            echo '<script>alert("You are now registered! Go back and login")</script>';
-            // header("Location: index.php");
-         } catch (mysqli_sql_exception) {
-            echo '<script>alert("That username is taken")</script>';
-         }
+      try {
+         mysqli_query($conn, $sql);
+         echo '<script>alert("You are now registered. Go back and login")</script>';
+      } catch (mysqli_sql_exception) {
+         echo '<script>alert("That username is taken")</script>';
       }
+   }
+
+   // Redirect to login page
+   if(isset($_POST['login'])) {
+      header("Location: index.php");
    }
 ?>
 <?php

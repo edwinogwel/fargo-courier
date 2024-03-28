@@ -57,7 +57,7 @@
       <!-- Logout -->
       <form action="home.php" method="post">
          <br>
-         <input type="submit" name="logout" value="logout" style="margin-left: 90%;">
+         <input type="submit" name="logout" value="logout" style="margin-left:90%">
       </form>
       
       <!-- Header -->
