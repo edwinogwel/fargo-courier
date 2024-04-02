@@ -3,8 +3,12 @@
   require_once('database.php');
   $users_query = "SELECT * FROM users";
   $shipments_query = "SELECT * FROM shipments";
+  $standard_query = "SELECT * FROM standard_subscribers";
+  $express_query = "SELECT * FROM express_subscribers";
   $users_result = mysqli_query($conn, $users_query);
   $shipments_result = mysqli_query($conn, $shipments_query);
+  $standard_result = mysqli_query($conn, $standard_query);
+  $express_result = mysqli_query($conn, $express_query);
 ?>
 <?php
   if(isset($_POST["logout"]))  {
@@ -39,11 +43,13 @@
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
       <a href="#customers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Reports</a>
       <a href="#shipments" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Shipments</a>
+      <a href="#standard" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Standard Customers</a>
+      <a href="#express" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Express Customers</a>
     </div>
   </nav>
 
   <!-- PAGE CONTENT-->
-  <div class="w3-main" style="margin-left:170px; margin-right:40px">
+   <div class="w3-main" style="margin-left:170px; margin-right:40px">
     <!-- Home -->
     <div class="w3-container" id="send_parcel" style="margin-top:75px">
       <!-- Logout -->
@@ -57,7 +63,7 @@
 
     <!-- Customers-->
     <div class="w3-container" id="customers" style="margin-top:75px margin-left:170px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Customers.</b></h1>
+     <h1 class="w3-xxxlarge w3-text-red"><b>Customers.</b></h1>
       <div class="bg-dark">
         <div class="container">
             <div class="row mt-5">
@@ -153,11 +159,97 @@
       </div>
     </div><br>
 
+    <!-- Standard Subscribers -->
+    <div class="w3-container" id="standard" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Standard Subscribers.</b></h1>
+      <div class="bg-dark">
+        <div class="container">
+            <div class="row mt-5">
+              <div class="col">
+                  <div class="card mt-5 ">
+                    <div class="card-header">
+                      <h2 class="display-6 text-center">Card Details</h2>
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-bordered text-center">
+                        <tr class="bg-dark text-white">
+                          <td>ID</td>
+                          <td>Name</td>
+                          <td>Card</td>
+                          <td>Expiry</td>
+                          <td>CVV</td>
+                        </tr>
+                        <tr>
+                        <?php
+                          while($row = mysqli_fetch_assoc($standard_result))
+                          {
+                        ?>
+                          <td><?php echo $row['ID']?></td>
+                          <td><?php echo $row['Name']?></td>
+                          <td><?php echo $row['Card']?></td>
+                          <td><?php echo $row['Expiry']?></td>
+                          <td><?php echo $row['Cvv']?></td>
+                        </tr>
+                          <?php
+                            }
+                          ?>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+         </div><br><br>
+      </div>
+    </div><br>
+
+    <!-- Express Subscribers -->
+    <div class="w3-container" id="express" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Express Subscribers.</b></h1>
+      <div class="bg-dark">
+        <div class="container">
+            <div class="row mt-5">
+              <div class="col">
+                  <div class="card mt-5 ">
+                    <div class="card-header">
+                      <h2 class="display-6 text-center">Card Details</h2>
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-bordered text-center">
+                        <tr class="bg-dark text-white">
+                          <td>ID</td>
+                          <td>Name</td>
+                          <td>Card</td>
+                          <td>Expiry</td>
+                          <td>CVV</td>
+                        </tr>
+                        <tr>
+                        <?php
+                          while($row = mysqli_fetch_assoc($express_result))
+                          {
+                        ?>
+                          <td><?php echo $row['ID']?></td>
+                          <td><?php echo $row['Name']?></td>
+                          <td><?php echo $row['Card']?></td>
+                          <td><?php echo $row['Expiry']?></td>
+                          <td><?php echo $row['Cvv']?></td>
+                        </tr>
+                          <?php
+                            }
+                          ?>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+         </div><br><br>
+      </div>
+    </div><br>
+
     <!-- End of page -->
-  </div>
+   </div>
 
     <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge"
+   <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge"
           style="margin-left: 10%; background-color: rgb(214, 214, 214);">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>

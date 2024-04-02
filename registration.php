@@ -19,12 +19,12 @@
 </head>
 
 <body style="background-image: url('./images/background2.jpg');background-repeat: no-repeat;
-      background-size: 100% auto; background-position:center;">
+   background-size: 100% auto; background-position:center;">
 
-      <form action="registration.php" method="post">
-         <input type="submit" value="login" name="login"
-                style="margin-top:10px;margin-left:90%;float:left">
-      </form>
+   <form action="registration.php" method="post">
+      <input type="submit" value="login" name="login"
+         style="margin-top:10px;margin-left:90%;float:left">
+   </form>
 
    <div class="w3-container" id="contact" style="width:50%;margin:auto">
 

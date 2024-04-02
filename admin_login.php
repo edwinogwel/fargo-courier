@@ -10,8 +10,8 @@
 <body class="login_page" style="background-image: url('./images/background.jpg');
       background-repeat: no-repeat; background-size: 100% auto; background-position:center">
    <form action="admin_login.php" method="post">
-      <h1 style="font-size: 40px; color: darkslategray">Fargo Courier</h1>
-      <h2 style="font-size: 22px; color: darkgray">Admin Portal</h2><br>
+      <h1 style="font-size:40px;color:darkslategray;">Fargo Courier</h1>
+      <h2 style="font-size:23px;color:orange;background-color:darkslategray;">Admin Portal</h2><br>
       <label>Username: </label>
       <input type="text" name="username" autocomplete="off"><br><br>
       <label>Password: </label>
@@ -30,7 +30,6 @@
 
          if ($_POST["username"] == "admin" && $_POST["password"] == "1234")
             header("Location: admin_page.php");
-
       }
       else
          echo '<script>alert("Missing username or password")</script>';

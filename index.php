@@ -15,8 +15,8 @@
       background-repeat: no-repeat; background-size: 100% auto; background-position:center">
       
    <form action="index.php" method="post">
-      <h1 style="font-size:40px; color: brown">Fargo Courier</h1>
-      <h2 style="font-size:22px; color: darksalmon">Customer Portal</h2><br>
+      <h1 style="font-size:40px;color:brown;">Fargo Courier</h1>
+      <h2 style="font-size:23px;color:coral;background-color:darkslategray">Customer Portal</h2><br>
       <label>Username: </label>
       <input type="text" name="username" autocomplete="off"><br><br>
       <label>Password: </label>
